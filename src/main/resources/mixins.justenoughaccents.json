@@ -1,11 +1,13 @@
 {
-	"package": "",
+	"package": "dev.lasm.justenoughaccents.mixin",
 	"required": true,
 	"refmap": "${mixin_refmap}",
 	"target": "@env(DEFAULT)",
 	"minVersion": "0.8.5",
 	"compatibilityLevel": "JAVA_8",
-	"mixins": [],
+	"mixins": [
+	],
 	"server": [],
-	"client": []
+	"client": [
+	]
 }

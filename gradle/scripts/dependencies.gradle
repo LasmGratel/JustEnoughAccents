@@ -25,6 +25,19 @@ repositories {
             includeGroup 'maven.modrinth'
         }
     }
+    exclusiveContent {
+        forRepository {
+            maven {
+                url 'https://maven.blamejared.com/'
+            }
+        }
+        filter {
+            includeGroup 'CraftTweaker2'
+        }
+    }
+    maven {
+        url "https://maven.cleanroommc.com"
+    }
     mavenLocal() // Must be last for caching to work
 }
 
@@ -51,6 +64,17 @@ dependencies {
     // runtimeOnly = runtime dependency
     // compileOnly = compile time dependency
     // annotationProcessor = annotation processing dependencies
+    api "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.684"
+
+    implementation rfg.deobf('curse.maven:had-enough-items-557549:5229422')
+    implementation rfg.deobf("maven.modrinth:gregtech-ce-unofficial:2.8.7-beta")
+    implementation rfg.deobf("maven.modrinth:codechicken-lib:3.2.3.358")
+    implementation rfg.deobf("maven.modrinth:groovyscript:0.8.0")
+
+//    implementation ("com.cleanroommc:groovyscript:1.0.1:dev") {
+//        transitive = false
+//    }
+
 
     // Transitive dependencies:
     // (Dependencies that your dependency depends on)
